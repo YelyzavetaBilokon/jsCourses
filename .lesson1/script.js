@@ -37,7 +37,7 @@ var complex = [];
 complex[0] = "My name is:";
 complex[1] = 7;
 complex[2] = null;
-complex[3] = info.age;
+complex[3] = info.age; // Добавьте в 4 элемент массива объект из 3 задания: тут нужно было прировнять к complex[3] = info (то есть всему массиву а не конкретному значению поля age)
 console.log(complex[2]);
 
 //task7
