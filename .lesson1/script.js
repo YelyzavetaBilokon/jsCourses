@@ -37,7 +37,7 @@ var complex = [];
 complex[0] = "My name is:";
 complex[1] = 7;
 complex[2] = null;
-complex[3] = info.age;
+complex[3] = info;
 console.log(complex[2]);
 
 //task7
