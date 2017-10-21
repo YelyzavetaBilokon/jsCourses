@@ -33,7 +33,7 @@ range(1,3); // logs in console => 6
 // Напишите функцию которая будет находить сумму простых чисел меньших переданному в нее значению. Пример работы:
     function getPrimesSumBelow(x, y) {
     var result = 0;
-    if (x>=2) {
+    if ( x>1 ) {
         labelContinue:
             for (i = x; i < y; i++) {
                 for (j = 2; j < i; j++) {
@@ -44,7 +44,7 @@ range(1,3); // logs in console => 6
         return result;
     }
     else {
-        console.log("x should be more than 2")
+        console.log("x should be more than 1")
     }
     }
 getPrimesSumBelow(2,10); // 2 + 3 + 5 + 7 = 17
