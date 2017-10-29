@@ -100,14 +100,16 @@ do {
     if (pr != null) {pr = pr.trim()}
 
     var cond = isNumber(pr) && pr != "" && pr != null;
+    // впринцыпе вместо этого сравнения можно было бы сравнить typeof pr === "number" и тогда это число и с ним можно дальше работать )
     if ( cond == true ){
+        // можно просто написать if(cond)
         arr.push(pr);
         result = result + +pr;
     }
 }
 while (cond != false);
 console.log(result);
-//
+
 // 5 задание
 //
 // Последовательность чисел Фибоначчи вычисляется по формуле формулу F(n) = F(n-1) + F(n-2).
@@ -144,6 +146,7 @@ function stringCheck(str){
 
 }
 console.log(stringCheck('я учу javascript и у меня получается!'));
+// точно получается)
 
 // 7 задание
 // Напиште код который выведет сотрудника который выполнил больше всех задач.
