@@ -58,6 +58,8 @@ alert(y);
 var numberArray = [1, 2, 3, 4, 10, 5, 6, 7];
 var func = numberArray.map(function (x) {
     alert(x);
+    // this will not work as expected you should return function from this function eg:
+    // return function() { alert(x) }
     return x;
 
 });
