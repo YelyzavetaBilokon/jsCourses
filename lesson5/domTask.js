@@ -27,7 +27,7 @@ console.log(em.length); // 3
 // Проверьте является ли form#main дочерним элементом для тега body
 
 var cl = document.body.children;
-console.log(cl);
+console.log(cl); // ?? this is not finished yet? or you have questions?)
 
 // 6 task
 //
