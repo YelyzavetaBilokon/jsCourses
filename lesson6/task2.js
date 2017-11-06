@@ -24,6 +24,7 @@ label.innerHTML = 'Age';
 var inputs = document.querySelectorAll('input');
 
 for ( var i = 0; i < inputs.length; i++){
+    // setAttribute заменяет все остальные классы в input а класс в даном случае нужно добавить а не заменить на input-lg
     document.querySelectorAll('input')[i].setAttribute('class','input-lg');
 }
 
