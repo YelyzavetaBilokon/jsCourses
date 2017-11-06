@@ -91,6 +91,7 @@ console.log(randomTable(5,6));
 //     </html>
 
 function findAttributes() {
+    // можно было сохранить document.getElementById('w3r') в переменную а потом уже брать у нее атрибуты
 
     var href = document.getElementById('w3r').getAttribute('href');
     var hreflang = document.getElementById('w3r').getAttribute('hreflang');
@@ -231,6 +232,7 @@ var elem1 = document.createElement('div');
 document.body.appendChild(elem1);
 elem1.setAttribute('class', 'www');
 var tagName = elem1.tagName.toLowerCase();
+// тут ты добавляешь класс www зачем его добавлять перед этим лишний операции с ДОМ не нужны
 elem1.setAttribute('class', 'www ' + tagName);
 
 
@@ -248,6 +250,7 @@ document.body.appendChild(ol);
 var n = 5;
 for ( var i = 0; i < n; i++){
     var li = document.createElement('li');
+    // лучше извне цикла обьявить ol = document.querySelector('ol') чтобы каждый раз оно его не искало он же у тебя один и в цикле не меняется
     document.querySelector('ol').appendChild(li);
     if ( i+1 == n){
         li.innerHTML = i+1;
