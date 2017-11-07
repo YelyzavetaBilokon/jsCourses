@@ -240,10 +240,8 @@ function colorCell() {
             }
             else {arr.push('0');}
         }
-
-        if ( funcSum(arr) >= 5){
+        if ( inString(arr) === true ){
             marker = true;
-            console.log("the end!");
             break;
         }
     }
@@ -258,28 +256,27 @@ function colorCell() {
             }
             else {arrCol.push('0');}
         }
-        if ( funcSum(arrCol) >= 5){
+        if ( inString(arrCol) === true ){
             marker = true;
-            console.log("the end!");
             break;
         }
     }
+
+    if ( marker === true ){
+        console.log("the end!");
+    }
 }
 
-function funcSum(array) {
-    var newArr = array.join("");
-    var result = 0;
-    var inString = newArr.search("11111");
-    if ( inString !== -1){
-        for ( var y = 0; y < array.length; y++){
-            result += +array[y];
-        }
-    }
-    else {
-        result = 0;
-    }
-    return result;
+function inString(array) {
 
+    var newArr = array.join("");
+    var result;
+    var inString = newArr.search("11111");
+
+    if ( inString !== -1){ result = true; }
+    else { result = false; }
+
+    return result;
 }
 
 // 11 task
