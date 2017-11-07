@@ -205,7 +205,7 @@ function changeH() {
 
 
 //
-// 10 task - Almost ready (need to add checking for cells in a row)
+// 10 task
 //
 // Дана таблица произвольного размера.
 // По нажатию на ячейку таблицы эта ячейка красится красным фоном ("активируется").
@@ -238,9 +238,10 @@ function colorCell() {
             if (( tdAll[i].style.backgroundColor === "red" ) === true) {
                 arr.push('1');
             }
+            else {arr.push('0');}
         }
 
-        if ( funcSum(arr) === 5){
+        if ( funcSum(arr) >= 5){
             marker = true;
             console.log("the end!");
             break;
@@ -255,8 +256,9 @@ function colorCell() {
             if (( trAll[r].children[t].style.backgroundColor === "red" ) === true) {
                 arrCol.push('1');
             }
+            else {arrCol.push('0');}
         }
-        if ( funcSum(arrCol) === 5){
+        if ( funcSum(arrCol) >= 5){
             marker = true;
             console.log("the end!");
             break;
@@ -265,13 +267,20 @@ function colorCell() {
 }
 
 function funcSum(array) {
+    var newArr = array.join("");
     var result = 0;
-    for ( var y = 0; y < array.length; y++){
-        result += +array[y];
+    var inString = newArr.search("11111");
+    if ( inString !== -1){
+        for ( var y = 0; y < array.length; y++){
+            result += +array[y];
+        }
+    }
+    else {
+        result = 0;
     }
     return result;
-}
 
+}
 
 // 11 task
 //
