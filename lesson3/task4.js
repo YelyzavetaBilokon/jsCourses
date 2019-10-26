@@ -1,6 +1,7 @@
 // 1 task
 // Create function "getName" that ask user his name with promt window and alerts his name to him in format: "Hello, <his_name>".
-    function getName(x, y) {
+function getName(x, y) {
+// не нужно обьявлять x, y как аргументы функции - их нужно обьявить как переменные просто внутри через var
     x = prompt("Enter your name");
     y = alert(`Hello, ${x}`);
     return y;
@@ -13,6 +14,7 @@ getName(); // if I put "Lily" in prompt I will see in alert: "Hello, Lily";
     function double(x) {
         x *= 2;
         return x;
+        // можно просто return x*2;
     }
 
 double(6); // logs in console => 12
@@ -31,7 +33,7 @@ range(1,3); // logs in console => 6
 
 // 4 task
 // Напишите функцию которая будет находить сумму простых чисел меньших переданному в нее значению. Пример работы:
-    function getPrimesSumBelow(x, y) {
+function getPrimesSumBelow(x, y) {
     var result = 0;
     if ( x>1 ) {
         labelContinue:
@@ -46,7 +48,8 @@ range(1,3); // logs in console => 6
     else {
         console.log("x should be more than 1")
     }
-    }
+}
+// мы еще не учили и не будем учить метки(это устаревший вариант), сделай задание без них!)
 getPrimesSumBelow(2,10); // 2 + 3 + 5 + 7 = 17
 
 // 5 task
@@ -58,6 +61,8 @@ function numberCheck(x){
     else {
         return true;
     }
+    
+    // или просто return  !(x%2 === 0);
 }
 numberCheck(100);
 
@@ -67,6 +72,7 @@ function numberCheckRange(z,y){
     var odd = [];
     for ( i=z; i<=y; i++){
         if (numberCheck(i) === true){
+            // или просто if (numberCheck(i))
             odd.push(i);
         };
     }
@@ -77,6 +83,7 @@ numberCheckRange(1,10);
 // 7 task
 // Create a function that will call promt window that will ask for a number to user, until he enters 9;
 function numberNine(number) {
+    // было бы здорово тут еще проверять что isNaN(number) !== true
     if (number !== 9){
         return numberNine(+prompt("Please enter number 9"));
     }
