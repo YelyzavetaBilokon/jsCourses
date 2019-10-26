@@ -6,6 +6,7 @@
 // "1 is odd"
 // "2 is even"
 for ( i=0; i<=15; i++){
+    // или можно писать так console.log(i + (i%2 === 0 ? " is even" : " is odd"));
     if ( i%2 === 0){
         console.log( i + " is even");
     }
@@ -21,12 +22,14 @@ for ( i=0; i<=15; i++){
 for ( i=1; i<=100; i++){
     if ( i%3 === 0){
         if ( i%3 === 0 && i%5 === 0 ){
+            // тут это i%3 === 0 проверять не нужно он уже есть правдой
             console.log("FizzBuzz");
         }
         else {console.log("Fizz");}
     }
     else if ( i%5 === 0){
         if ( i%3 === 0 && i%5 === 0 ){
+            // тут это i%5 === 0 проверять не нужно он уже есть правдой
             console.log("FizzBuzz");
         }
         else {console.log("Buzz");}
